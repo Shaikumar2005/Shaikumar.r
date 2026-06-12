@@ -329,9 +329,7 @@ const certificates = [
           <FaGithub />
         </a>
 
-        <a href="#" className="project-btn">
-          View Details →
-        </a>
+       
       </div>
 
     </div>
@@ -365,9 +363,7 @@ const certificates = [
           <FaGithub />
         </a>
 
-        <a href="#" className="project-btn">
-          View Details →
-        </a>
+        
       </div>
 
     </div>
@@ -424,9 +420,7 @@ const certificates = [
           <FaGithub />
         </a>
 
-        <a href="#" className="project-btn">
-          View Details →
-        </a>
+        
       </div>
 
     </div>
