@@ -75,17 +75,20 @@ body {
   color: gray;
 }
 
-.buttons {
-  margin-top: 30px;
+.buttons{
+  display:flex;
+  gap:15px;
+  margin-top:30px;
 }
 
-.btn {
-  background: #00c853;
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 8px;
-  margin-right: 15px;
+.btn{
+  padding:14px 28px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .socials {
@@ -295,6 +298,23 @@ footer {
 .floating-card h3{
   margin-bottom:10px;
   color:#00c853;
+}
+
+@media (max-width:768px){
+
+  .buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    width:100%;
+  }
+
+  .btn{
+    width:220px;
+    max-width:90%;
+  }
+
 }
 
 @keyframes float{
@@ -743,7 +763,6 @@ footer {
   grid-template-columns:repeat(2,1fr);
   gap:30px;
   margin-top:50px;
-  
 }
 
 .research-card{
@@ -904,7 +923,7 @@ footer {
 
 
 .contact-section{
-  padding:40px 8%;
+  padding:120px 8%;
   background:#fff;
 }
 
@@ -958,44 +977,12 @@ footer {
     justify-content:center;
   }
 
-}.prev-btn,
-.next-btn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-
-  width:55px;
-  height:55px;
-
-  border:none;
-  border-radius:50%;
-
-  background:#fff;
-  font-size:24px;
-  cursor:pointer;
-}
-
-.prev-btn{
-  left:-80px;
-}
-
-.next-btn{
-  right:-80px;
-}
-
-.cert-counter{
-  color:white;
-  margin-top:15px;
-  text-align:center;
-  font-size:18px;
-  font-weight:700;
-}
-/* ==========================
+}/* ==========================
    EXPERIENCE SECTION
 ========================== */
 
 .experience-section{
-    padding:5px 5%;
+  padding:120px 8%;
   background:#fff;
 }
 
@@ -1098,6 +1085,196 @@ footer {
 
   .timeline-content h3{
     font-size:22px;
+  }
+
+}
+
+/* ==========================
+   GLOBAL MOBILE FIX
+========================== */
+
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar{
+    padding:15px 20px;
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .navbar ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+  }
+
+  .navbar h2,
+  .logo{
+    font-size:24px;
+    text-align:center;
+  }
+
+  /* Hero */
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding:120px 20px 60px;
+    gap:40px;
+  }
+
+  .hero-left,
+  .hero-right{
+    width:100%;
+  }
+
+  .hero-title{
+    font-size:42px !important;
+    line-height:1.2;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .hero-right img{
+    width:250px;
+    height:250px;
+  }
+
+  .buttons{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  .socials{
+    justify-content:center;
+  }
+
+  /* About */
+  .about-section{
+    flex-direction:column;
+    gap:40px;
+    padding:70px 20px;
+  }
+
+  .about-left,
+  .about-right{
+    width:100%;
+  }
+
+  .about-left h2{
+    font-size:36px;
+    text-align:center;
+  }
+
+  .about-left p{
+    text-align:center;
+  }
+
+  .about-tag{
+    display:block;
+    text-align:center;
+  }
+
+  .about-stats{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  /* Skills */
+  .tech-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+  }
+
+  .tech-item svg{
+    font-size:50px;
+  }
+
+  /* Experience */
+  .timeline::before{
+    left:15px;
+  }
+
+  .timeline-item{
+    padding-left:55px;
+  }
+
+  .timeline-dot{
+    left:0;
+  }
+
+  /* Projects */
+  .projects-grid{
+    grid-template-columns:1fr;
+  }
+
+  .project-card{
+    padding:25px;
+  }
+
+  /* Research */
+  .research-grid{
+    grid-template-columns:1fr;
+  }
+
+  .research-card{
+    min-height:auto;
+  }
+
+  .research-card h3{
+    font-size:24px;
+  }
+
+  /* Contact */
+  .contact-container{
+    grid-template-columns:1fr;
+  }
+
+  .contact-info{
+    width:100%;
+  }
+
+  .contact-info div{
+    justify-content:center;
+  }
+
+  /* Footer */
+  footer{
+    text-align:center;
+    padding:25px 15px;
+  }
+
+}
+
+/* Small Phones */
+
+@media (max-width: 480px){
+
+  .hero-title{
+    font-size:34px !important;
+  }
+
+  .section-title{
+    font-size:34px;
+  }
+
+  .about-left h2{
+    font-size:30px;
+  }
+
+  .tech-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .project-tech{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  .research-number,
+  .project-number{
+    font-size:55px;
   }
 
 }
