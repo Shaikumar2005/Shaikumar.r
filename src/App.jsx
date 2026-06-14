@@ -420,7 +420,7 @@ const certificates = [
           <FaGithub />
         </a>
 
-        
+      
       </div>
 
     </div>
